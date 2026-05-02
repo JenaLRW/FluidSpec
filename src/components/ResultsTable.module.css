@@ -155,3 +155,55 @@
 .right {
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .colHead {
+    display: none;
+  }
+
+  .mfrHeader {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+  }
+
+  .row > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .row > span::before {
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .desc {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .model {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .price {
+    text-align: left;
+  }
+}

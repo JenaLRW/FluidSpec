@@ -37,18 +37,18 @@ function ResultsTable({ grouped }) {
 
           {grouped[mfr].map(part => (
             <div key={part.id} className={styles.row}>
-              <span className={styles.model}>{part.model}</span>
-              <span className={styles.desc}>{part.description}</span>
-              <span className={styles.centered}>{part.ways}</span>
-              <span className={styles.centered}>
+              <span className={styles.model} data-label="Model">{part.model}</span>
+              <span className={styles.desc} data-label="Description">{part.description}</span>
+              <span className={styles.centered} data-label="Ways">{part.ways}</span>
+              <span className={styles.centered} data-label="Element">
                 <span className={part.element === 'Poppet' ? styles.badgePoppet : styles.badgeSpool}>
                   {part.element}
                 </span>
               </span>
-              <span className={styles.centered}>{part.maxPsi.toLocaleString()}</span>
-              <span className={styles.centered}>{part.maxGpm !== null ? part.maxGpm : '—'}</span>
-              <span className={styles.cavity}>{part.cavity}</span>
-              <span className={styles.price}>
+              <span className={styles.centered} data-label="Max PSI">{part.maxPsi.toLocaleString()}</span>
+              <span className={styles.centered} data-label="Max GPM">{part.maxGpm !== null ? part.maxGpm : '—'}</span>
+              <span className={styles.cavity} data-label="Cavity">{part.cavity}</span>
+              <span className={styles.price} data-label="Price">
                 {part.price !== null ? `$${part.price.toFixed(2)}` : '—'}
               </span>
             </div>
