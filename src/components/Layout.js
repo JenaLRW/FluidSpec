@@ -22,7 +22,8 @@ function Layout() {
         </nav>
         <img src={jwfLogo} alt="JWF logo" className={styles.headerCenterLogo} />
         <div className={styles.headerRight}>
-          <span className={styles.headerCompany}>Copyright 2026 GENEVIEVE Technology. All rights reserved.</span>
+          <span className={styles.headerCompanyLong}>Copyright 2026 GENEVIEVE Technology. All rights reserved.</span>
+          <span className={styles.headerCompanyShort}>(c) GENEVIEVE</span>
         </div>
       </header>
 

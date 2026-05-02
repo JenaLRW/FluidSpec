@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './FilterPanel.module.css';
 
 const ACTUATION_OPTIONS = [
@@ -18,20 +18,34 @@ const CAVITY_OPTIONS = [
 ];
 
 function FilterPanel({ filters, setFilter, clearFilters, activeFilterCount, totalCount, filteredCount }) {
-  return (
-    <aside className={styles.panel}>
-      <div className={styles.panelHeader}>
-        <span className={styles.panelTitle}>Filters</span>
-        {activeFilterCount > 0 && (
-          <button className={styles.clearBtn} onClick={clearFilters}>
-            Clear {activeFilterCount}
-          </button>
-        )}
-      </div>
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-      <div className={styles.resultCount}>
-        {filteredCount} of {totalCount} parts
-      </div>
+  return (
+    <aside className={`${styles.panel} ${mobileOpen ? styles.panelOpen : ''}`}>
+      <button
+        className={styles.mobileToggle}
+        onClick={() => setMobileOpen(o => !o)}
+        aria-expanded={mobileOpen}
+      >
+        <span>
+          Filters{activeFilterCount > 0 ? ` (${activeFilterCount})` : ''} · {filteredCount} of {totalCount}
+        </span>
+        <span className={styles.mobileToggleIcon}>{mobileOpen ? '▲' : '▼'}</span>
+      </button>
+
+      <div className={styles.panelBody}>
+        <div className={styles.panelHeader}>
+          <span className={styles.panelTitle}>Filters</span>
+          {activeFilterCount > 0 && (
+            <button className={styles.clearBtn} onClick={clearFilters}>
+              Clear {activeFilterCount}
+            </button>
+          )}
+        </div>
+
+        <div className={styles.resultCount}>
+          {filteredCount} of {totalCount} parts
+        </div>
 
       <div className={styles.filterGroup}>
         <label className={styles.label}>Search</label>
@@ -120,6 +134,7 @@ function FilterPanel({ filters, setFilter, clearFilters, activeFilterCount, tota
           <option value="">Any</option>
           {CAVITY_OPTIONS.map(c => <option key={c} value={c}>{c}</option>)}
         </select>
+      </div>
       </div>
     </aside>
   );

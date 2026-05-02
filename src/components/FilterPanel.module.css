@@ -13,6 +13,16 @@
   top: var(--header-height);
 }
 
+.panelBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileToggle {
+  display: none;
+}
+
 .panelHeader {
   display: flex;
   align-items: center;
@@ -116,4 +126,45 @@
   background: var(--color-primary);
   color: #fff;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0;
+    gap: 0;
+  }
+
+  .mobileToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 1rem;
+    background: var(--color-surface);
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: left;
+  }
+
+  .mobileToggleIcon {
+    font-size: 10px;
+    color: var(--color-text-muted);
+  }
+
+  .panelBody {
+    display: none;
+    padding: 1rem;
+  }
+
+  .panelOpen .panelBody {
+    display: flex;
+  }
 }
