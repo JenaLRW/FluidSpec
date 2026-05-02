@@ -8,6 +8,8 @@
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1"
   },
+  "author": "GENEVIEVE Technology",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -20,7 +20,7 @@ function Layout() {
           </NavLink>
         </nav>
         <div className={styles.headerRight}>
-          <span className={styles.headerCompany}>JWF Technologies</span>
+          <span className={styles.headerCompany}>Copyright 2026 GENEVIEVE Technology. All rights reserved.</span>
         </div>
       </header>
 
