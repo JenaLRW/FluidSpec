@@ -23,7 +23,9 @@ function Layout() {
         <img src={jwfLogo} alt="JWF logo" className={styles.headerCenterLogo} />
         <div className={styles.headerRight}>
           <span className={styles.headerCompanyLong}>Copyright 2026 GENEVIEVE Technology. All rights reserved.</span>
-          <span className={styles.headerCompanyShort}>(c) GENEVIEVE</span>
+          <span className={styles.headerCompanyShort}>
+            Copyright GENEVIEVE Technology<br />All rights reserved.
+          </span>
         </div>
       </header>
 

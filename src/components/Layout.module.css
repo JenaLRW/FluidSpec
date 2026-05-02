@@ -158,6 +158,8 @@
   }
 
   .headerCompanyShort {
-    display: inline;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.4;
   }
 }
