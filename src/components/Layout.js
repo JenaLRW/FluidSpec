@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import styles from './Layout.module.css';
+import jwfLogo from '../assets/jwflogo.png';
 
 function Layout() {
   return (
@@ -19,6 +20,7 @@ function Layout() {
             About
           </NavLink>
         </nav>
+        <img src={jwfLogo} alt="JWF logo" className={styles.headerCenterLogo} />
         <div className={styles.headerRight}>
           <span className={styles.headerCompany}>Copyright 2026 GENEVIEVE Technology. All rights reserved.</span>
         </div>
