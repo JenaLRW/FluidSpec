@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/FluidSpec/static/css/main.32a56e08.css",
-    "main.js": "/FluidSpec/static/js/main.473de79c.js",
-    "static/media/jwflogo.png": "/FluidSpec/static/media/jwflogo.d67172fb84735c562d99.png",
-    "index.html": "/FluidSpec/index.html",
-    "main.32a56e08.css.map": "/FluidSpec/static/css/main.32a56e08.css.map",
-    "main.473de79c.js.map": "/FluidSpec/static/js/main.473de79c.js.map"
+    "main.css": "/static/css/main.3069a0b2.css",
+    "main.js": "/static/js/main.1c440d19.js",
+    "static/media/jwflogo.png": "/static/media/jwflogo.d67172fb84735c562d99.png",
+    "index.html": "/index.html",
+    "main.3069a0b2.css.map": "/static/css/main.3069a0b2.css.map",
+    "main.1c440d19.js.map": "/static/js/main.1c440d19.js.map"
   },
   "entrypoints": [
-    "static/css/main.32a56e08.css",
-    "static/js/main.473de79c.js"
+    "static/css/main.3069a0b2.css",
+    "static/js/main.1c440d19.js"
   ]
 }
